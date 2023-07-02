@@ -1,5 +1,5 @@
 
-;; title: counter
+;; title: ordinal-wave
 ;; version:
 ;; summary:
 ;; description:
@@ -28,5 +28,3 @@
 ;; private functions
 ;;
 
-(define-public (hello-world) 
-  (ok (print "hello world")))

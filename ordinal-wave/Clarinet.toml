@@ -1,0 +1,35 @@
+[project]
+name = 'ordinal-wave'
+description = ''
+authors = []
+telemetry = false
+cache_dir = '.\.cache'
+
+[[project.requirements]]
+contract_id = 'SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait'
+[contracts.ordinal-wave]
+path = 'contracts/ordinal-wave.clar'
+clarity_version = 2
+epoch = 2.1
+
+[[project.requirements]]
+contract_id = "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard"
+
+[contracts.sip009-nft]
+path = "contracts/ordinalwaves.clar"
+
+[contracts.bogus-nft]
+path = "contracts/ordinalwaves.clar"
+
+[contracts.sip010-token]
+path = "contracts/ordinal-wave-token.clar"
+
+[contracts.bogus-ft]
+path = "contracts/ordinal-wave-token.clar"
+
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false

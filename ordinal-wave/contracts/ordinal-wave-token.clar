@@ -6,7 +6,6 @@
 (define-constant contract-owner tx-sender)
 
 (define-fungible-token ordinal-wave u100000000)
-
 (define-constant err-owner-only (err u100))
 (define-constant err-not-token-owner (err u102))
 

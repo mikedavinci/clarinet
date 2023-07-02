@@ -5,7 +5,7 @@
 
 (define-constant contract-owner tx-sender)
 
-(define-fungible-token amazing-coin u100000000)
+(define-fungible-token ordinal-wave u100000000)
 
 (define-constant err-owner-only (err u100))
 (define-constant err-not-token-owner (err u102))
@@ -13,16 +13,16 @@
 (define-public (transfer (amount uint) (sender principal) (recipient principal) (memo (optional (buff 34))))
 	(begin
 		(asserts! (is-eq tx-sender sender) err-not-token-owner)
-		(ft-transfer? amazing-coin amount sender recipient)
+		(ft-transfer? ordinal-wave amount sender recipient)
 	)
 )
 
 (define-read-only (get-name)
-	(ok "Amazing Coin")
+	(ok "OrdinalWave Coin")
 )
 
 (define-read-only (get-symbol)
-	(ok "AC")
+	(ok "OWC")
 )
 
 (define-read-only (get-decimals)
@@ -30,11 +30,11 @@
 )
 
 (define-read-only (get-balance (who principal))
-	(ok (ft-get-balance amazing-coin who))
+	(ok (ft-get-balance ordinal-wave who))
 )
 
 (define-read-only (get-total-supply)
-	(ok (ft-get-supply amazing-coin))
+	(ok (ft-get-supply ordinal-wave))
 )
 
 (define-read-only (get-token-uri)
@@ -44,6 +44,6 @@
 (define-public (mint (amount uint) (recipient principal))
 	(begin
 		(asserts! (is-eq tx-sender contract-owner) err-owner-only)
-		(ft-mint? amazing-coin amount recipient)
+		(ft-mint? ordinal-wave amount recipient)
 	)
 )

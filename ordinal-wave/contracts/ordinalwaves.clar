@@ -18,7 +18,6 @@
 
 (define-read-only (get-token-uri (token-id uint))
 	(ok none)
-  ;; (concat "https://ordinalwave.com/nft/" (uint-to-string token-id)
 )
 
 (define-read-only (get-owner (token-id uint))

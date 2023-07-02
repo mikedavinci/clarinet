@@ -17,11 +17,11 @@
 )
 
 (define-read-only (get-name)
-	(ok "OrdinalWave Coin")
+	(ok "OrdinalWave Token")
 )
 
 (define-read-only (get-symbol)
-	(ok "OWC")
+	(ok "OWT")
 )
 
 (define-read-only (get-decimals)
